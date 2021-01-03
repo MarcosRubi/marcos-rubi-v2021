@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Portafolio | Marcos Rubí</title><!-- ESTILOS PERSONALES -->
+    <link rel="stylesheet" href="css/styles.css"/><!-- FUENTES -->
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Guntur:wght@300;400&amp;family=Mirza:wght@600&amp;display=swap" rel="stylesheet"/><!-- ICONOS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+  </head>
+  <body>
+    <header>
+      <div class="container header">
+        <div class="logo"><a href="#"><i class="fa fa-gem"> </i>marcosrubí</a></div>
+        <div class="toggle" onclick="javascript:toggleMenu();"></div>
+        <nav class="menu">
+          <ul class="capitalize">
+            <li><a class="active" href="#" onclick="javascript:toggleMenu();">Sobre Mí</a></li>
+            <li><a href="#" onclick="javascript:toggleMenu();">Proyectos</a></li>
+            <li><a href="#" onclick="javascript:toggleMenu();">Experiencia</a></li>
+            <li><a href="#" onclick="javascript:toggleMenu();">Contactar</a></li>
+          </ul>
+        </nav>
+        <div class="social">
+          <ul>
+            <li><a href="#"><i class="fab fa-linkedin-in"> </i></a></li>
+            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section class="banner">
+      <div class="banner__video">
+        <video src="video/bg_banner.mp4" autoplay="autoplay" loop="loop"> </video>
+      </div>
+      <div class="banner__overlay"></div>
+      <div class="banner__content">
+        <h1>Hola, mi nombre es <wbr><span> Marcos Rubí </span></h1>
+        <p><b>Técnico en redes y sistemas operativos</b>, actualmente soy estudiante de tercer año en ingeniería de sistemas y redes.</p><a class="btn btn-primary" href="#">Descargar CV </a>
+      </div>
+    </section>
+    <main class="container">
+      <div class="heading">
+        <h2>Proyectos</h2>
+      </div>
+      <div class="categories" id="categories"><a class="active" href="#">Todos</a><a href="#">GitHub</a><a href="#">Codepen</a><a href="#">Wordpress</a></div>
+      <section class="projects">
+        <figure class="effect-bubba item" data-categorie="wordpress">
+          <div class="item-content"><img src="https://cdn.pixabay.com/photo/2020/03/01/12/36/fire-4892711__340.jpg"/></div>
+          <figcaption><a class="btn btn-primary" href="#">Código</a><a class="btn btn-secondary" href="#">Demo </a></figcaption>
+        </figure>
+        <figure class="effect-bubba item" data-categorie="github">
+          <div class="item-content"><img src="https://cdn.pixabay.com/photo/2020/12/26/16/52/pasture-5861901__340.jpg"/></div>
+          <figcaption><a class="btn btn-primary" href="#">Código</a><a class="btn btn-secondary" href="#">Demo </a></figcaption>
+        </figure>
+        <figure class="effect-bubba item" data-categorie="codepen">
+          <div class="item-content"><img src="https://cdn.pixabay.com/photo/2020/12/26/16/47/christmas-5861895__340.jpg"/></div>
+          <figcaption><a class="btn btn-primary" href="#">Código</a><a class="btn btn-secondary" href="#">Demo</a></figcaption>
+        </figure>
+        <figure class="effect-bubba item" data-categorie="wordpress">
+          <div class="item-content"><img src="https://cdn.pixabay.com/photo/2020/03/01/12/36/fire-4892711__340.jpg"/></div>
+          <figcaption><a class="btn btn-primary" href="#">Código</a><a class="btn btn-secondary" href="#">Demo </a></figcaption>
+        </figure>
+        <figure class="effect-bubba item" data-categorie="github">
+          <div class="item-content"><img src="https://cdn.pixabay.com/photo/2020/12/26/16/52/pasture-5861901__340.jpg"/></div>
+          <figcaption><a class="btn btn-primary" href="#">Código</a><a class="btn btn-secondary" href="#">Demo </a></figcaption>
+        </figure>
+        <figure class="effect-bubba item" data-categorie="codepen">
+          <div class="item-content"><img src="https://cdn.pixabay.com/photo/2020/12/26/16/47/christmas-5861895__340.jpg"/></div>
+          <figcaption><a class="btn btn-primary" href="#">Código</a><a class="btn btn-secondary" href="#">Demo </a></figcaption>
+        </figure>
+      </section>
+    </main><!-- MUURI.JS ~ Filtrar proyectos por categorías -->
+    <script src="https://cdn.jsdelivr.net/npm/web-animations-js@2.3.2/web-animations.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/muuri@0.9.3/dist/muuri.min.js"></script><!-- JS Personalizado -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
