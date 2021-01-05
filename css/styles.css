@@ -72,6 +72,7 @@ h1 span {
   font-size: 2.5rem;
   margin-bottom: 15px;
   font-family: "Mirza", cursive;
+  padding-top: 60px;
 }
 
 header {
@@ -165,7 +166,6 @@ section.banner .banner__content a {
 
 .about-me {
   font-size: 16px;
-  padding-top: 60px;
 }
 .about-me h2,
 .about-me span.languaje {
@@ -184,7 +184,7 @@ section.banner .banner__content a {
 }
 .about-me__content p {
   text-align: justify;
-  color: #333;
+  color: #666;
   margin: 10px 0px;
 }
 .about-me__description {
@@ -235,9 +235,6 @@ section.banner .banner__content a {
   }
 }
 
-main {
-  padding-top: 60px;
-}
 main .categories {
   display: flex;
   justify-content: center;
@@ -342,6 +339,42 @@ figure.effect-bubba:hover a {
   transform: translate3d(0, 0, 0);
 }
 
+.h {
+  height: 1000px;
+}
+
+.experience {
+  font-size: 16px;
+}
+.experience__content {
+  margin: 0px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 1px #333;
+  padding: 20px;
+}
+.experience__content .date {
+  padding: 20px 40px;
+  background: #01579b;
+  color: #fff;
+}
+.experience__content .date span {
+  color: #f1f1f1;
+}
+.experience__content .w-65 {
+  padding: 20px 40px;
+  max-width: 60%;
+}
+.experience__content h2,
+.experience__content h3 {
+  font-family: "Mirza", cursive;
+  font-size: 1.5rem;
+}
+.experience__content p {
+  margin-top: 10px;
+}
+
 @media (max-width: 992px) {
   .heading {
     font-size: 2rem;
@@ -360,6 +393,10 @@ figure.effect-bubba:hover a {
 
   main .projects .item {
     width: calc(50% - 20px);
+  }
+
+  .experience .experience__content {
+    justify-content: space-between;
   }
 }
 @media (max-width: 768px) {
@@ -441,6 +478,26 @@ figure.effect-bubba:hover a {
 .social a {
     font-size: 28px;
     padding: 10px 15px;
+  }
+
+  .experience {
+    font-size: 16px;
+  }
+  .experience__content {
+    flex-direction: column;
+    margin: 30px 0px;
+  }
+  .experience__content .date {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+  }
+  .experience__content .w-65 {
+    max-width: 100%;
+    padding: 10px 15px;
+  }
+  .experience__content.even {
+    flex-direction: column-reverse;
   }
 }
 @media (max-width: 576px) {
