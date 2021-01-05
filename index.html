@@ -3,16 +3,16 @@
   <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Portafolio | Marcos Rubí</title><!-- ESTILOS PERSONALES -->
+    <title>Portafolio | Marcos Rubí</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/><!-- ESTILOS PERSONALES -->
     <link rel="stylesheet" href="css/styles.css"/><!-- FUENTES -->
-    <link rel="preconnect" href="https://fonts.gstatic.com"/>
     <link href="https://fonts.googleapis.com/css2?family=Hind+Guntur:wght@300;400&amp;family=Mirza:wght@600&amp;display=swap" rel="stylesheet"/><!-- ICONOS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
   </head>
   <body>
     <header>
       <div class="container header">
-        <div class="logo"><a href="#"><i class="fa fa-gem"> </i>marcosrubí</a></div>
+        <div class="logo"><a href="#"><img src="images/logo.png" alt="Logo Ruby"/><span>marcosrubí</span></a></div>
         <div class="toggle" onclick="javascript:toggleMenu();"></div>
         <nav class="menu">
           <ul class="capitalize">
@@ -35,12 +35,38 @@
     </header>
     <section class="banner">
       <div class="banner__video">
-        <video src="video/bg_banner.mp4" autoplay="autoplay" loop="loop"> </video>
+        <video autoplay="autoplay" loop="loop">
+          <source src="video/bg_banner.mp4" type="video/mp4"/>Tu navegador no soporta la etiqueta HTML5 video
+        </video>
       </div>
       <div class="banner__overlay"></div>
       <div class="banner__content">
         <h1>Hola, mi nombre es <wbr><span> Marcos Rubí </span></h1>
         <p><b>Técnico en redes y sistemas operativos</b>, actualmente soy estudiante de tercer año en ingeniería de sistemas y redes.</p><a class="btn btn-primary" href="#">Descargar CV </a>
+      </div>
+    </section>
+    <section class="about-me container">
+      <div class="heading">
+        <h2>Sobre Mí</h2>
+      </div>
+      <div class="d-flex">
+        <div class="about-me__img"><img src="https://via.placeholder.com/250x250" alt="Foto de perfil - Marcos Rubí"/></div>
+        <div class="about-me__content">
+          <div class="about-me__description">
+            <h2>Marcos Daniel Rubí Hernández</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim quisquam ea quasi consectetur recusandae corporis accusamus. Fugiat, totam. Rem obcaecati sapiente error eius laboriosam magni culpa tempora fugiat praesentium unde!</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor, dicta repudiandae in, laboriosam assumenda excepturi nemo corrupti, impedit vel commodi inventore ad beatae. Dolore, iste animi molestiae natus.</p>
+          </div>
+          <div class="about-me__skills">
+            <h2>Habilidades
+              <div><span class="languaje">HTML</span><span class="progress" title="95%"><span class="value html"></span></span></div>
+              <div><span class="languaje">CSS</span><span class="progress" title="85%"><span class="value css"></span></span></div>
+              <div><span class="languaje">JavaScript</span><span class="progress" title="70%"><span class="value js"></span></span></div>
+              <div><span class="languaje">PHP</span><span class="progress" title="60%"><span class="value php"></span></span></div>
+              <div><span class="languaje">GIT</span><span class="progress" title="50%"><span class="value git"></span></span></div>
+            </h2>
+          </div>
+        </div>
       </div>
     </section>
     <main class="container">

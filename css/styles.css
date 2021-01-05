@@ -7,7 +7,7 @@
 body {
   font-family: "Hind Guntur", sans-serif;
   background: #f4f6ff;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .container {
@@ -24,6 +24,16 @@ a {
   text-decoration: none;
   color: #01579b;
   transition: all 500ms;
+}
+
+h1 {
+  line-height: 0.8;
+  font-size: 3rem;
+}
+h1 span {
+  font-size: 3.5rem;
+  color: #c1272d;
+  font-family: "Mirza", cursive;
 }
 
 .capitalize {
@@ -60,25 +70,23 @@ a {
 .heading {
   text-align: center;
   font-size: 2.5rem;
+  margin-bottom: 15px;
   font-family: "Mirza", cursive;
-  padding: 30px 0px;
 }
 
 header {
   width: 100%;
   position: fixed;
   top: 0;
-  left: 50%;
-  transform: translatex(-50%);
   background: #fff;
   font-family: "Mirza", cursive;
-  padding: 30px 0px;
+  padding: 20px 0px;
   transition: all 500ms;
   z-index: 100;
 }
 header .header {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 header ul {
@@ -88,14 +96,17 @@ header a {
   padding: 10px 15px;
 }
 header .logo a {
-  display: inline-block;
+  display: flex;
 }
-header .logo i {
-  color: #b71c1c;
-  margin-right: 5px;
+header .logo a img {
+  width: 24px;
+  height: 24px;
 }
 header .logo a:hover {
   transform: scale(1.05);
+}
+header .toggle {
+  display: none;
 }
 header .menu a:hover,
 header .social a:hover,
@@ -117,7 +128,8 @@ section.banner {
   color: #f4f6ff;
 }
 section.banner .banner__video {
-  margin-top: 103px;
+  margin-top: 83px;
+  height: 100vh;
   position: relative;
 }
 section.banner .banner__video video {
@@ -135,7 +147,7 @@ section.banner .banner__overlay {
   opacity: 0.95;
 }
 section.banner .banner__content {
-  margin-top: 53px;
+  margin-top: 40px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -143,59 +155,125 @@ section.banner .banner__content {
   width: 90%;
   z-index: 90;
 }
-section.banner .banner__content h1 {
-  line-height: 0.8;
-  font-size: 3rem;
-}
-section.banner .banner__content h1 span {
-  font-size: 3.5rem;
-  color: #c1272d;
-  font-family: "Mirza", cursive;
-}
 section.banner .banner__content p {
   margin: 25px 0px;
 }
 section.banner .banner__content a {
   display: inline-block;
+  letter-spacing: 2px;
 }
 
-.categories {
+.about-me {
+  font-size: 16px;
+  padding-top: 60px;
+}
+.about-me h2,
+.about-me span.languaje {
+  font-family: "Mirza", cursive;
+}
+.about-me .d-flex {
+  display: flex;
+  justify-content: space-between;
+}
+.about-me__img {
+  align-self: center;
+}
+.about-me__content {
+  display: flex;
+  justify-content: space-between;
+}
+.about-me__content p {
+  text-align: justify;
+  color: #333;
+  margin: 10px 0px;
+}
+.about-me__description {
+  padding: 0px 30px;
+  max-width: 60%;
+}
+.about-me__skills {
+  min-width: 40%;
+}
+.about-me__skills div {
+  margin-top: 10px;
+}
+.about-me__skills span.languaje {
+  font-family: "Mirza", cursive;
+  font-size: 1.2rem;
+}
+.about-me__skills span.progress {
+  display: block;
+  overflow: hidden;
+  background: #d9e2ff;
+  height: 8px;
+  border-radius: 10px;
+}
+.about-me__skills span.progress span.value {
+  float: left;
+  height: 8px;
+  background: #01579b;
+  animation: progress 1.5s linear;
+}
+.about-me__skills span.progress span.html {
+  width: 95%;
+}
+.about-me__skills span.progress span.css {
+  width: 85%;
+}
+.about-me__skills span.progress span.js {
+  width: 70%;
+}
+.about-me__skills span.progress span.php {
+  width: 60%;
+}
+.about-me__skills span.progress span.git {
+  width: 50%;
+}
+@keyframes progress {
+  0% {
+    width: 0;
+  }
+}
+
+main {
+  padding-top: 60px;
+}
+main .categories {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
-.categories a {
+main .categories a {
   color: #10375c;
   padding: 10px 20px;
   font-size: 18px;
   font-weight: 700;
 }
-.categories a.active {
+main .categories a.active {
   color: #c1272d;
 }
-
-.projects {
+main .projects {
   position: relative;
   width: 100%;
   opacity: 0;
   transform: opacity 0.5s linear 1s;
 }
-.projects.img-loaded {
+main .projects.img-loaded {
   opacity: 1;
 }
-.projects .item {
+main .projects .item {
   position: absolute;
   display: block;
   padding: 0px;
   margin: 10px;
   width: calc(33.33% - 20px);
 }
-.projects img {
+main .projects img {
   width: 100%;
   cursor: pointer;
   vertical-align: top;
 }
-.projects .item-content {
+main .projects .item-content {
   position: relative;
 }
 
@@ -265,14 +343,38 @@ figure.effect-bubba:hover a {
 }
 
 @media (max-width: 992px) {
-  header .header {
-    justify-content: space-between;
+  .heading {
+    font-size: 2rem;
   }
+
   header a {
-    padding: 10px;
+    padding: 10px 8px;
+  }
+
+  .about-me .d-flex {
+    flex-direction: column;
+  }
+  .about-me .d-flex__content {
+    padding-top: 20px;
+  }
+
+  main .projects .item {
+    width: calc(50% - 20px);
   }
 }
 @media (max-width: 768px) {
+  .btn {
+    padding: 8px;
+  }
+
+  .heading {
+    font-size: 1.7rem;
+  }
+
+  .header .toggle {
+    display: block;
+  }
+
   .toggle {
     background-image: url(https://inveto.vercel.app/images/menu.png);
     background-repeat: no-repeat;
@@ -300,7 +402,7 @@ figure.effect-bubba:hover a {
     display: block;
     width: 100%;
     height: 100vh;
-    top: 103px;
+    top: 85px;
     right: -100%;
     padding: 100px 50px;
     text-align: center;
@@ -320,7 +422,7 @@ figure.effect-bubba:hover a {
 
   @keyframes showMenu {
     0% {
-      padding: 100%;
+      padding: 100% 0px;
     }
     100% {
       padding: 20px 0px;
@@ -335,15 +437,26 @@ figure.effect-bubba:hover a {
     padding: 20px 0px;
   }
 
-  nav.menu a {
-    font-size: 24px;
-  }
-
-  .projects .item {
-    width: calc(50% - 20px);
+  nav.menu a,
+.social a {
+    font-size: 28px;
+    padding: 10px 15px;
   }
 }
 @media (max-width: 576px) {
+  .btn {
+    padding: 10px 12px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+  h1 span {
+    font-size: 2.5rem;
+    color: #c1272d;
+    font-family: "Mirza", cursive;
+  }
+
   header .header {
     flex-wrap: wrap;
   }
@@ -356,10 +469,27 @@ figure.effect-bubba:hover a {
     margin-top: 10px;
   }
   header nav.menu {
-    top: 132px;
+    top: 128px;
   }
 
-  .projects .item {
+  .about-me__content {
+    flex-direction: column;
+  }
+  .about-me__content h2 {
+    font-size: 1.3rem;
+  }
+  .about-me__description {
+    max-width: 100%;
+    padding: 0px;
+  }
+  .about-me__skills {
+    max-width: 90%;
+  }
+  .about-me__skills span.languaje {
+    font-size: 1rem;
+  }
+
+  main .projects .item {
     width: calc(100% - 20px);
   }
 }
