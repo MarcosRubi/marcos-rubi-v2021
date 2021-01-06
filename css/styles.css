@@ -7,7 +7,6 @@
 body {
   font-family: "Hind Guntur", sans-serif;
   background: #f4f6ff;
-  font-size: 20px;
 }
 
 .container {
@@ -36,6 +35,11 @@ h1 span {
   font-family: "Mirza", cursive;
 }
 
+h3 {
+  font-family: "Mirza", cursive;
+  font-size: 1.8rem;
+}
+
 .capitalize {
   text-transform: capitalize;
 }
@@ -45,7 +49,7 @@ h1 span {
   padding: 10px 20px;
   border-radius: 5px;
   text-transform: uppercase;
-  margin: 0px 5px;
+  cursor: pointer;
 }
 .btn:focus {
   box-shadow: 0px 3px 5px #1a1a1a;
@@ -69,13 +73,19 @@ h1 span {
 
 .heading {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2.7rem;
   margin-bottom: 15px;
   font-family: "Mirza", cursive;
   padding-top: 60px;
 }
 
+.d-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
 header {
+  font-size: 20px;
   width: 100%;
   position: fixed;
   top: 0;
@@ -126,6 +136,7 @@ section.banner {
   overflow: hidden;
   text-align: center;
   line-height: 1.5;
+  font-size: 20px;
   color: #f4f6ff;
 }
 section.banner .banner__video {
@@ -164,17 +175,6 @@ section.banner .banner__content a {
   letter-spacing: 2px;
 }
 
-.about-me {
-  font-size: 16px;
-}
-.about-me h2,
-.about-me span.languaje {
-  font-family: "Mirza", cursive;
-}
-.about-me .d-flex {
-  display: flex;
-  justify-content: space-between;
-}
 .about-me__img {
   align-self: center;
 }
@@ -199,7 +199,7 @@ section.banner .banner__content a {
 }
 .about-me__skills span.languaje {
   font-family: "Mirza", cursive;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 .about-me__skills span.progress {
   display: block;
@@ -235,6 +235,9 @@ section.banner .banner__content a {
   }
 }
 
+main .btn {
+  margin: 0px 5px;
+}
 main .categories {
   display: flex;
   justify-content: center;
@@ -339,13 +342,6 @@ figure.effect-bubba:hover a {
   transform: translate3d(0, 0, 0);
 }
 
-.h {
-  height: 1000px;
-}
-
-.experience {
-  font-size: 16px;
-}
 .experience__content {
   margin: 0px auto;
   display: flex;
@@ -353,6 +349,7 @@ figure.effect-bubba:hover a {
   align-items: center;
   box-shadow: 0px 0px 1px #333;
   padding: 20px;
+  background: #fff;
 }
 .experience__content .date {
   padding: 20px 40px;
@@ -366,13 +363,91 @@ figure.effect-bubba:hover a {
   padding: 20px 40px;
   max-width: 60%;
 }
-.experience__content h2,
-.experience__content h3 {
-  font-family: "Mirza", cursive;
-  font-size: 1.5rem;
-}
 .experience__content p {
   margin-top: 10px;
+}
+
+footer {
+  font-size: 18px;
+}
+footer p {
+  font-weight: 600;
+  font-size: 1.1em;
+}
+footer h3 {
+  font-size: 2em;
+}
+footer .information {
+  min-width: 40%;
+}
+footer .information__item {
+  display: flex;
+  margin: 40px 0px;
+}
+footer .information .pl-10 {
+  padding-left: 10px;
+}
+footer .form-contact {
+  min-width: 40%;
+}
+footer .form-contact form {
+  margin: 20px 0px;
+}
+footer .form-contact form div {
+  margin-top: 30px;
+  position: relative;
+}
+footer .form-contact form div label {
+  position: absolute;
+  top: 12px;
+  left: 10px;
+  pointer-events: none;
+}
+footer .form-contact form div span {
+  top: 0px;
+  left: 16px;
+  transition: all 500ms;
+  margin-left: 7px;
+  position: absolute;
+}
+footer .form-contact form input[type=text],
+footer .form-contact form input[type=email],
+footer .form-contact form textarea {
+  width: 100%;
+  height: 50px;
+  padding-left: 30px;
+  outline: none;
+  border: 1px solid;
+  font-size: 1rem;
+}
+footer .form-contact form textarea {
+  min-height: 125px;
+  padding-top: 12px;
+  resize: none;
+}
+footer .form-contact form input[type=submit] {
+  border: none;
+  outline: none;
+  padding: 20px 30px;
+}
+footer .form-contact form input[type=text]:focus ~ label span,
+footer .form-contact form input[type=email]:focus ~ label span,
+footer .form-contact form input[type=text]:valid ~ label span,
+footer .form-contact form input[type=email]:valid ~ label span,
+footer .form-contact form textarea:focus ~ label span,
+footer .form-contact form textarea:valid ~ label span {
+  top: -30px;
+  left: -10px;
+  font-size: 0.9rem;
+  color: #333;
+}
+footer .form-contact form input[type=text]:focus ~ label i,
+footer .form-contact form input[type=email]:focus ~ label i,
+footer .form-contact form input[type=text]:valid ~ label i,
+footer .form-contact form input[type=email]:valid ~ label i,
+footer .form-contact form textarea:focus ~ label,
+footer .form-contact form textarea:valid ~ label {
+  color: #01579b;
 }
 
 @media (max-width: 992px) {
@@ -387,7 +462,7 @@ figure.effect-bubba:hover a {
   .about-me .d-flex {
     flex-direction: column;
   }
-  .about-me .d-flex__content {
+  .about-me__content {
     padding-top: 20px;
   }
 
@@ -499,6 +574,16 @@ figure.effect-bubba:hover a {
   .experience__content.even {
     flex-direction: column-reverse;
   }
+
+  footer .d-flex {
+    flex-direction: column;
+  }
+  footer .form-contact form {
+    width: 75%;
+  }
+  footer h3 {
+    font-size: 1.7rem;
+  }
 }
 @media (max-width: 576px) {
   .btn {
@@ -548,6 +633,13 @@ figure.effect-bubba:hover a {
 
   main .projects .item {
     width: calc(100% - 20px);
+  }
+
+  footer .form-contact form {
+    width: 100%;
+  }
+  footer a {
+    font-size: 1rem;
   }
 }
 
