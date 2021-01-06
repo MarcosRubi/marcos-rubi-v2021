@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Hind Guntur", sans-serif;
   background: #f4f6ff;
@@ -82,6 +86,21 @@ h3 {
 .d-flex {
   display: flex;
   justify-content: space-between;
+}
+
+.feather {
+  stroke-width: 2px;
+  fill: none;
+  width: 20px;
+  height: 20px;
+  margin-top: 4px;
+}
+
+#sobre-mi,
+#proyectos,
+#experiencia,
+#contactar {
+  padding-top: 30px;
 }
 
 header {
@@ -405,7 +424,7 @@ footer .form-contact form div label {
 }
 footer .form-contact form div span {
   top: 0px;
-  left: 16px;
+  left: 25px;
   transition: all 500ms;
   margin-left: 7px;
   position: absolute;
@@ -415,7 +434,7 @@ footer .form-contact form input[type=email],
 footer .form-contact form textarea {
   width: 100%;
   height: 50px;
-  padding-left: 30px;
+  padding-left: 37px;
   outline: none;
   border: 1px solid;
   font-size: 1rem;
@@ -441,12 +460,12 @@ footer .form-contact form textarea:valid ~ label span {
   font-size: 0.9rem;
   color: #333;
 }
-footer .form-contact form input[type=text]:focus ~ label i,
-footer .form-contact form input[type=email]:focus ~ label i,
-footer .form-contact form input[type=text]:valid ~ label i,
-footer .form-contact form input[type=email]:valid ~ label i,
-footer .form-contact form textarea:focus ~ label,
-footer .form-contact form textarea:valid ~ label {
+footer .form-contact form input[type=text]:focus ~ label .feather,
+footer .form-contact form input[type=email]:focus ~ label .feather,
+footer .form-contact form input[type=text]:valid ~ label .feather,
+footer .form-contact form input[type=email]:valid ~ label .feather,
+footer .form-contact form textarea:focus ~ label .feather,
+footer .form-contact form textarea:valid ~ label .feather {
   color: #01579b;
 }
 
@@ -456,7 +475,7 @@ footer .form-contact form textarea:valid ~ label {
   }
 
   header a {
-    padding: 10px 8px;
+    padding: 10px 7px;
   }
 
   .about-me .d-flex {
@@ -481,6 +500,11 @@ footer .form-contact form textarea:valid ~ label {
 
   .heading {
     font-size: 1.7rem;
+  }
+
+  .feather {
+    width: 24px;
+    height: 24px;
   }
 
   .header .toggle {
@@ -597,6 +621,13 @@ footer .form-contact form textarea:valid ~ label {
     font-size: 2.5rem;
     color: #c1272d;
     font-family: "Mirza", cursive;
+  }
+
+  #sobre-mi,
+#proyectos,
+#experiencia,
+#contactar {
+    padding-top: 60px;
   }
 
   header .header {

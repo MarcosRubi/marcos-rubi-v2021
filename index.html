@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/><!-- ESTILOS PERSONALES -->
     <link rel="stylesheet" href="css/styles.css"/><!-- FUENTES -->
     <link href="https://fonts.googleapis.com/css2?family=Hind+Guntur:wght@300;400&amp;family=Mirza:wght@600&amp;display=swap" rel="stylesheet"/><!-- ICONOS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
   </head>
   <body>
     <header>
@@ -16,7 +16,7 @@
         <div class="toggle" onclick="javascript:toggleMenu();"></div>
         <nav class="menu">
           <ul class="capitalize">
-            <li><a class="active" href="#sobre-mi" onclick="javascript:toggleMenu();">Sobre Mí</a></li>
+            <li><a href="#sobre-mi" onclick="javascript:toggleMenu();">Sobre Mí</a></li>
             <li><a href="#proyectos" onclick="javascript:toggleMenu();">Proyectos</a></li>
             <li><a href="#experiencia" onclick="javascript:toggleMenu();">Experiencia</a></li>
             <li><a href="#contactar" onclick="javascript:toggleMenu();">Contactar</a></li>
@@ -24,11 +24,11 @@
         </nav>
         <div class="social">
           <ul>
-            <li><a href="#"><i class="fab fa-linkedin-in"> </i></a></li>
-            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-            <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+            <li><a href="#"><i data-feather="linkedin"> </i></a></li>
+            <li><a href="#"><i data-feather="facebook"></i></a></li>
+            <li><a href="#"><i data-feather="twitter"></i></a></li>
+            <li><a href="#"><i data-feather="instagram"></i></a></li>
+            <li><a href="#"><i data-feather="mail"></i></a></li>
           </ul>
         </div>
       </div>
@@ -42,7 +42,7 @@
       <div class="banner__overlay"></div>
       <div class="banner__content">
         <h1>Hola, mi nombre es <wbr><span> Marcos Rubí </span></h1>
-        <p><b>Técnico en redes y sistemas operativos</b>, actualmente soy estudiante de tercer año en ingeniería de sistemas y redes.</p><a class="btn btn-primary" href="#">Descargar CV </a>
+        <p><b>Técnico en redes y sistemas operativos</b>, actualmente soy estudiante de tercer año en ingeniería de sistemas y redes.</p><a class="btn btn-primary" href="#" download="CV-Marcos_Rubi">Descargar CV </a>
       </div>
     </section>
     <section class="about-me container" id="sobre-mi">
@@ -110,7 +110,7 @@
           <h3>Soporte Técnico</h3><span>01 Nov 2018 ~ 10 Dic 2018</span>
         </div>
         <div class="w-65">
-          <h3>Calvo Conservar S.A De C.V</h3>
+          <h3>Calvo Conservas S.A De C.V</h3>
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum non harum qui expedita accusamus deleniti repudiandae sunt, deserunt omnis asperiores, alias ab!</p>
         </div>
       </div>
@@ -132,19 +132,19 @@
         <div class="information">
           <h3>Información</h3>
           <div class="information__item">
-            <div><i class="fa fa-envelope-open"></i></div>
+            <div><i data-feather="mail"></i></div>
             <div class="pl-10">
               <p>Email</p><a href="mailto:danielhernandez9980@gmail.com">danielhernandez9980@gmail.com</a>
             </div>
           </div>
           <div class="information__item">
-            <div><i class="fa fa-phone"></i></div>
+            <div><i data-feather="phone"></i></div>
             <div class="pl-10">
-              <p>Teléfono</p><span>(+503) 01234-5678</span>
+              <p>Teléfono</p><a href="tel:+503.0123.4567">(+503) 01234-5678</a>
             </div>
           </div>
           <div class="information__item">
-            <div><i class="fa fa-map-marker"></i></div>
+            <div><i data-feather="map-pin"></i></div>
             <div class="pl-10">
               <p>Dirección</p><span>Lotificación Cutuco, Barrio Concepción</span>
             </div>
@@ -155,15 +155,15 @@
           <form action="#" onsubmit="return false;">
             <div>
               <input type="text" name="name" required=""/>
-              <label><i class="fa fa-user"></i><span>Nombre</span></label>
+              <label><i data-feather="user"></i><span>Nombre</span></label>
             </div>
             <div>
               <input type="email" name="email" required=""/>
-              <label><i class="fa fa-envelope"></i><span>Email</span></label>
+              <label><i data-feather="mail"></i><span>Email</span></label>
             </div>
             <div>
               <textarea name="message" required=""></textarea>
-              <label><i class="fa fa-comment-alt"></i><span>Mensaje</span></label>
+              <label><i data-feather="message-square"></i><span>Mensaje</span></label>
             </div>
             <input class="btn btn-secondary" type="submit" value="Enviar Mensaje"/>
           </form>

@@ -24,10 +24,12 @@ const grid = new Muuri('.projects', {
         rounding: false
     }
 });
+feather.replace()
+
 window.onload = () => {
     window.addEventListener("scroll", () => {
-        const header = document.querySelector("header");
-        header.classList.toggle("sticky", scrollY > 0);
+        const header = document.querySelector("header")
+        header.classList.toggle("sticky", scrollY > 0)
     });
 
     grid.refreshItems().layout()
