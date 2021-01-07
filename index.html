@@ -7,12 +7,13 @@
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/><!-- ESTILOS PERSONALES -->
     <link rel="stylesheet" href="css/styles.css"/><!-- FUENTES -->
     <link href="https://fonts.googleapis.com/css2?family=Hind+Guntur:wght@300;400&amp;family=Mirza:wght@600&amp;display=swap" rel="stylesheet"/><!-- ICONOS -->
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script><!-- AOS.JS ~ ANIMATIONs -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
   </head>
   <body>
-    <header>
+    <header data-aos="fade-down" data-aos-easing="ease-in-out">
       <div class="container header">
-        <div class="logo"><a href="#"><img src="images/logo.png" alt="Logo Ruby"/><span>marcosrubí</span></a></div>
+        <div class="logo"><a href="#"><img src="images/logo.png" alt="Logo Ruby" loading="eager"/><span>marcosrubí</span></a></div>
         <div class="toggle" onclick="javascript:toggleMenu();"></div>
         <nav class="menu">
           <ul class="capitalize">
@@ -33,7 +34,7 @@
         </div>
       </div>
     </header>
-    <section class="banner">
+    <section class="banner" data-aos="fade">
       <div class="banner__video">
         <video autoplay="autoplay" loop="loop">
           <source src="video/bg_banner.mp4" type="video/mp4"/>Tu navegador no soporta la etiqueta HTML5 video
@@ -45,67 +46,71 @@
         <p><b>Técnico en redes y sistemas operativos</b>, actualmente soy estudiante de tercer año en ingeniería de sistemas y redes.</p><a class="btn btn-primary" href="#" download="CV-Marcos_Rubi">Descargar CV </a>
       </div>
     </section>
-    <section class="about-me container" id="sobre-mi">
-      <div class="heading">
-        <h2>Sobre Mí</h2>
-      </div>
-      <div class="d-flex">
-        <div class="about-me__img"><img src="https://via.placeholder.com/250x250" alt="Foto de perfil - Marcos Rubí"/></div>
-        <div class="about-me__content">
-          <div class="about-me__description">
-            <h2>Marcos Daniel Rubí Hernández</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim quisquam ea quasi consectetur recusandae corporis accusamus. Fugiat, totam. Rem obcaecati sapiente error eius laboriosam magni culpa tempora fugiat praesentium unde!</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor, dicta repudiandae in, laboriosam assumenda excepturi nemo corrupti, impedit vel commodi inventore ad beatae. Dolore, iste animi molestiae natus.</p>
-          </div>
-          <div class="about-me__skills">
-            <h2>Habilidades
-              <div><span class="languaje">HTML</span><span class="progress" title="95%"><span class="value html"></span></span></div>
-              <div><span class="languaje">CSS</span><span class="progress" title="85%"><span class="value css"></span></span></div>
-              <div><span class="languaje">JavaScript</span><span class="progress" title="70%"><span class="value js"></span></span></div>
-              <div><span class="languaje">PHP</span><span class="progress" title="60%"><span class="value php"></span></span></div>
-              <div><span class="languaje">GIT</span><span class="progress" title="50%"><span class="value git"></span></span></div>
-            </h2>
+    <section class="about-me" id="sobre-mi">
+      <div class="container">
+        <div class="heading" data-aos="fade-top" data-aos-once="true">
+          <h2>Sobre Mí</h2>
+        </div>
+        <div class="d-flex">
+          <div class="about-me__img" data-aos="fade-right" data-aos-once="true"><img src="https://via.placeholder.com/250x250" alt="Foto de perfil - Marcos Rubí" loading="lazy"/></div>
+          <div class="about-me__content">
+            <div class="about-me__description" data-aos="fade" data-aos-once="true">
+              <h2>Marcos Daniel Rubí Hernández</h2>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim quisquam ea quasi consectetur recusandae corporis accusamus. Fugiat, totam. Rem obcaecati sapiente error eius laboriosam magni culpa tempora fugiat praesentium unde!</p>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor, dicta repudiandae in, laboriosam assumenda excepturi nemo corrupti, impedit vel commodi inventore ad beatae. Dolore, iste animi molestiae natus.</p>
+            </div>
+            <div class="about-me__skills" data-aos="fade-left" data-aos-once="true">
+              <h2>Habilidades
+                <div><span class="languaje">HTML</span><span class="progress" title="95%"><span class="value html"></span></span></div>
+                <div><span class="languaje">CSS</span><span class="progress" title="85%"><span class="value css"></span></span></div>
+                <div><span class="languaje">JavaScript</span><span class="progress" title="70%"><span class="value js"></span></span></div>
+                <div><span class="languaje">PHP</span><span class="progress" title="60%"><span class="value php"></span></span></div>
+                <div><span class="languaje">GIT</span><span class="progress" title="50%"><span class="value git"></span></span></div>
+              </h2>
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <main class="container" id="proyectos">
-      <div class="heading">
-        <h2>Proyectos</h2>
+    <main class="even" id="proyectos">
+      <div class="container" data-aos="fade" data-aos-once="true">
+        <div class="heading">
+          <h2>Proyectos</h2>
+        </div>
+        <div class="categories" id="categories"><a class="active" href="#">Todos</a><a href="#">GitHub</a><a href="#">Codepen</a><a href="#">Wordpress</a></div>
+        <section class="projects">
+          <figure class="effect-bubba item" data-categorie="wordpress">
+            <div class="item-content"><img src="https://cdn.pixabay.com/photo/2020/03/01/12/36/fire-4892711__340.jpg" loading="lazy"/></div>
+            <figcaption><a class="btn btn-primary" href="#">Código</a><a class="btn btn-secondary" href="#">Demo </a></figcaption>
+          </figure>
+          <figure class="effect-bubba item" data-categorie="github">
+            <div class="item-content"><img src="https://cdn.pixabay.com/photo/2020/12/26/16/52/pasture-5861901__340.jpg" loading="lazy"/></div>
+            <figcaption><a class="btn btn-primary" href="#">Código</a><a class="btn btn-secondary" href="#">Demo </a></figcaption>
+          </figure>
+          <figure class="effect-bubba item" data-categorie="codepen">
+            <div class="item-content"><img src="https://cdn.pixabay.com/photo/2020/12/26/16/47/christmas-5861895__340.jpg" loading="lazy"/></div>
+            <figcaption><a class="btn btn-primary" href="#">Código</a><a class="btn btn-secondary" href="#">Demo</a></figcaption>
+          </figure>
+          <figure class="effect-bubba item" data-categorie="wordpress">
+            <div class="item-content"><img src="https://cdn.pixabay.com/photo/2020/03/01/12/36/fire-4892711__340.jpg" loading="lazy"/></div>
+            <figcaption><a class="btn btn-primary" href="#">Código</a><a class="btn btn-secondary" href="#">Demo </a></figcaption>
+          </figure>
+          <figure class="effect-bubba item" data-categorie="github">
+            <div class="item-content"><img src="https://cdn.pixabay.com/photo/2020/12/26/16/52/pasture-5861901__340.jpg" loading="lazy"/></div>
+            <figcaption><a class="btn btn-primary" href="#">Código</a><a class="btn btn-secondary" href="#">Demo </a></figcaption>
+          </figure>
+          <figure class="effect-bubba item" data-categorie="codepen">
+            <div class="item-content"><img src="https://cdn.pixabay.com/photo/2020/12/26/16/47/christmas-5861895__340.jpg" loading="lazy"/></div>
+            <figcaption><a class="btn btn-primary" href="#">Código</a><a class="btn btn-secondary" href="#">Demo </a></figcaption>
+          </figure>
+        </section>
       </div>
-      <div class="categories" id="categories"><a class="active" href="#">Todos</a><a href="#">GitHub</a><a href="#">Codepen</a><a href="#">Wordpress</a></div>
-      <section class="projects">
-        <figure class="effect-bubba item" data-categorie="wordpress">
-          <div class="item-content"><img src="https://cdn.pixabay.com/photo/2020/03/01/12/36/fire-4892711__340.jpg"/></div>
-          <figcaption><a class="btn btn-primary" href="#">Código</a><a class="btn btn-secondary" href="#">Demo </a></figcaption>
-        </figure>
-        <figure class="effect-bubba item" data-categorie="github">
-          <div class="item-content"><img src="https://cdn.pixabay.com/photo/2020/12/26/16/52/pasture-5861901__340.jpg"/></div>
-          <figcaption><a class="btn btn-primary" href="#">Código</a><a class="btn btn-secondary" href="#">Demo </a></figcaption>
-        </figure>
-        <figure class="effect-bubba item" data-categorie="codepen">
-          <div class="item-content"><img src="https://cdn.pixabay.com/photo/2020/12/26/16/47/christmas-5861895__340.jpg"/></div>
-          <figcaption><a class="btn btn-primary" href="#">Código</a><a class="btn btn-secondary" href="#">Demo</a></figcaption>
-        </figure>
-        <figure class="effect-bubba item" data-categorie="wordpress">
-          <div class="item-content"><img src="https://cdn.pixabay.com/photo/2020/03/01/12/36/fire-4892711__340.jpg"/></div>
-          <figcaption><a class="btn btn-primary" href="#">Código</a><a class="btn btn-secondary" href="#">Demo </a></figcaption>
-        </figure>
-        <figure class="effect-bubba item" data-categorie="github">
-          <div class="item-content"><img src="https://cdn.pixabay.com/photo/2020/12/26/16/52/pasture-5861901__340.jpg"/></div>
-          <figcaption><a class="btn btn-primary" href="#">Código</a><a class="btn btn-secondary" href="#">Demo </a></figcaption>
-        </figure>
-        <figure class="effect-bubba item" data-categorie="codepen">
-          <div class="item-content"><img src="https://cdn.pixabay.com/photo/2020/12/26/16/47/christmas-5861895__340.jpg"/></div>
-          <figcaption><a class="btn btn-primary" href="#">Código</a><a class="btn btn-secondary" href="#">Demo </a></figcaption>
-        </figure>
-      </section>
     </main>
     <section class="experience container" id="experiencia">
-      <div class="heading">
+      <div class="heading" data-aos="fade" data-aos-once="true">
         <h2>Experiencia</h2>
       </div>
-      <div class="experience__content">
+      <div class="experience__content" data-aos="fade-top" data-aos-once="true">
         <div class="date">
           <h3>Soporte Técnico</h3><span>01 Nov 2018 ~ 10 Dic 2018</span>
         </div>
@@ -114,7 +119,7 @@
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum non harum qui expedita accusamus deleniti repudiandae sunt, deserunt omnis asperiores, alias ab!</p>
         </div>
       </div>
-      <div class="experience__content even">
+      <div class="experience__content even" data-aos="fade-top" data-aos-once="true">
         <div class="w-65">
           <h3 class="capitalize">Instituciones públicas de la zona oriental de El Salvador</h3>
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum non harum qui expedita accusamus deleniti repudiandae sunt, deserunt omnis asperiores, alias ab!</p>
@@ -124,54 +129,57 @@
         </div>
       </div>
     </section>
-    <footer class="container" id="contactar">
-      <div class="heading">
-        <h2>Contactar</h2>
-      </div>
-      <div class="d-flex">
-        <div class="information">
-          <h3>Información</h3>
-          <div class="information__item">
-            <div><i data-feather="mail"></i></div>
-            <div class="pl-10">
-              <p>Email</p><a href="mailto:danielhernandez9980@gmail.com">danielhernandez9980@gmail.com</a>
-            </div>
-          </div>
-          <div class="information__item">
-            <div><i data-feather="phone"></i></div>
-            <div class="pl-10">
-              <p>Teléfono</p><a href="tel:+503.0123.4567">(+503) 01234-5678</a>
-            </div>
-          </div>
-          <div class="information__item">
-            <div><i data-feather="map-pin"></i></div>
-            <div class="pl-10">
-              <p>Dirección</p><span>Lotificación Cutuco, Barrio Concepción</span>
-            </div>
-          </div>
+    <footer id="contactar">
+      <div class="container">
+        <div class="heading" data-aos="fade-top" data-aos-once="true">
+          <h2>Contactar</h2>
         </div>
-        <div class="form-contact">
-          <h3>Enviar Correro</h3>
-          <form action="#" onsubmit="return false;">
-            <div>
-              <input type="text" name="name" required=""/>
-              <label><i data-feather="user"></i><span>Nombre</span></label>
+        <div class="d-flex">
+          <div class="information" data-aos="fade-right" data-aos-once="true">
+            <h3>Información</h3>
+            <div class="information__item">
+              <div><i data-feather="mail"></i></div>
+              <div class="pl-10">
+                <p>Email</p><a href="mailto:danielhernandez9980@gmail.com">danielhernandez9980@gmail.com</a>
+              </div>
             </div>
-            <div>
-              <input type="email" name="email" required=""/>
-              <label><i data-feather="mail"></i><span>Email</span></label>
+            <div class="information__item">
+              <div><i data-feather="phone"></i></div>
+              <div class="pl-10">
+                <p>Teléfono</p><a href="tel:+503.0123.4567">(+503) 01234-5678</a>
+              </div>
             </div>
-            <div>
-              <textarea name="message" required=""></textarea>
-              <label><i data-feather="message-square"></i><span>Mensaje</span></label>
+            <div class="information__item">
+              <div><i data-feather="map-pin"></i></div>
+              <div class="pl-10">
+                <p>Dirección</p><span>Lotificación Cutuco, Barrio Concepción</span>
+              </div>
             </div>
-            <input class="btn btn-secondary" type="submit" value="Enviar Mensaje"/>
-          </form>
+          </div>
+          <div class="form-contact" data-aos="fade-left" data-aos-once="true">
+            <h3>Enviar Correro</h3>
+            <form action="#" onsubmit="return false;">
+              <div>
+                <input type="text" name="name" required=""/>
+                <label><i data-feather="user"></i><span>Nombre</span></label>
+              </div>
+              <div>
+                <input type="email" name="email" required=""/>
+                <label><i data-feather="mail"></i><span>Email</span></label>
+              </div>
+              <div>
+                <textarea name="message" required=""></textarea>
+                <label><i data-feather="message-square"></i><span>Mensaje</span></label>
+              </div>
+              <input class="btn btn-secondary" type="submit" value="Enviar Mensaje"/>
+            </form>
+          </div>
         </div>
       </div>
     </footer><!-- MUURI.JS ~ Filtrar proyectos por categorías -->
     <script src="https://cdn.jsdelivr.net/npm/web-animations-js@2.3.2/web-animations.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/muuri@0.9.3/dist/muuri.min.js"></script><!-- JS Personalizado -->
+    <script src="https://cdn.jsdelivr.net/npm/muuri@0.9.3/dist/muuri.min.js"></script><!-- AOS.JS ~ ANIMATIONS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script><!-- JS Personalizado -->
     <script src="js/main.js"></script>
   </body>
 </html>

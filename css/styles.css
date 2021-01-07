@@ -6,6 +6,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -85,7 +86,7 @@ h3 {
 
 .d-flex {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .feather {
@@ -93,14 +94,18 @@ h3 {
   fill: none;
   width: 20px;
   height: 20px;
-  margin-top: 4px;
+  margin-top: 5px;
+}
+
+.even {
+  background: #f0f0f0;
 }
 
 #sobre-mi,
 #proyectos,
 #experiencia,
 #contactar {
-  padding-top: 30px;
+  padding: 20px 0px 40px 0px;
 }
 
 header {
@@ -137,6 +142,9 @@ header .logo a:hover {
 }
 header .toggle {
   display: none;
+}
+header .feather {
+  margin-top: 10px;
 }
 header .menu a:hover,
 header .social a:hover,
@@ -388,6 +396,14 @@ figure.effect-bubba:hover a {
 
 footer {
   font-size: 18px;
+  background: #1a1a1a;
+  color: #f4f6ff;
+}
+footer a {
+  color: #039be5;
+}
+footer a:hover {
+  color: #03a9f4;
 }
 footer p {
   font-weight: 600;
@@ -415,11 +431,12 @@ footer .form-contact form {
 footer .form-contact form div {
   margin-top: 30px;
   position: relative;
+  color: #1a1a1a;
 }
 footer .form-contact form div label {
   position: absolute;
-  top: 12px;
-  left: 10px;
+  top: 10px;
+  left: 8px;
   pointer-events: none;
 }
 footer .form-contact form div span {
@@ -437,7 +454,8 @@ footer .form-contact form textarea {
   padding-left: 37px;
   outline: none;
   border: 1px solid;
-  font-size: 1rem;
+  font-size: 1.2rem;
+  font-family: "Mirza", cursive;
 }
 footer .form-contact form textarea {
   min-height: 125px;
@@ -455,10 +473,10 @@ footer .form-contact form input[type=text]:valid ~ label span,
 footer .form-contact form input[type=email]:valid ~ label span,
 footer .form-contact form textarea:focus ~ label span,
 footer .form-contact form textarea:valid ~ label span {
-  top: -30px;
+  top: -33px;
   left: -10px;
   font-size: 0.9rem;
-  color: #333;
+  color: #f4f6ff;
 }
 footer .form-contact form input[type=text]:focus ~ label .feather,
 footer .form-contact form input[type=email]:focus ~ label .feather,
@@ -470,6 +488,10 @@ footer .form-contact form textarea:valid ~ label .feather {
 }
 
 @media (max-width: 992px) {
+  .d-flex {
+    justify-content: space-between;
+  }
+
   .heading {
     font-size: 2rem;
   }
@@ -599,6 +621,9 @@ footer .form-contact form textarea:valid ~ label .feather {
     flex-direction: column-reverse;
   }
 
+  footer .feather {
+    margin-top: 3px;
+  }
   footer .d-flex {
     flex-direction: column;
   }
@@ -642,7 +667,7 @@ footer .form-contact form textarea:valid ~ label .feather {
     margin-top: 10px;
   }
   header nav.menu {
-    top: 128px;
+    top: 135px;
   }
 
   .about-me__content {

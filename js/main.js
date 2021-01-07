@@ -13,34 +13,39 @@ function itemActive(data, isMenu = false) {
             element.classList.add('active')
             if (isMenu == false) {
                 e.preventDefault()
-                const categorie = element.innerHTML.toLowerCase();
+                const categorie = element.innerHTML.toLowerCase()
                 categorie === 'todos' ? grid.filter('[data-categorie]') : grid.filter(`[data-categorie = ${categorie}]`)
             }
         })
     })
 }
+
 const grid = new Muuri('.projects', {
     layout: {
         rounding: false
     }
-});
+})
 feather.replace()
 
 window.onload = () => {
+    //HEADER STICKY
     window.addEventListener("scroll", () => {
         const header = document.querySelector("header")
         header.classList.toggle("sticky", scrollY > 0)
-    });
+    })
 
+    //GRID LAYOUTS TO PROJECTS
     grid.refreshItems().layout()
     document.querySelector('.projects').classList.add('img-loaded')
 
+    //ADD CLASS TO ITEM ACTIVE FROM CATEGORIES
     const categories = document.querySelectorAll('#categories a')
-    itemActive(categories);
+    itemActive(categories)
 
+    //ADD CLASS TO ITEM ACTIVE FROM MENU
     const menu = document.querySelectorAll('.menu a')
     itemActive(menu, true)
-
-
-};
+}
+//ANIMATIONS
+AOS.init();
 
