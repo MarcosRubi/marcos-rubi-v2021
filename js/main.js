@@ -5,7 +5,7 @@ function toggleMenu() {
     menu.classList.toggle('active')
     toggle.classList.toggle('active')
 }
-function itemActive(data, isMenu = false) {
+function itemActive(data, isMenu = false, isLogo = false) {
     data.forEach((element) => {
         element.addEventListener('click', (e) => {
 
@@ -17,10 +17,13 @@ function itemActive(data, isMenu = false) {
                 categorie === 'todos' ? grid.filter('[data-categorie]') : grid.filter(`[data-categorie = ${categorie}]`)
             }
         })
+        isLogo == true ? data.forEach((item) => { item.classList.remove('active') }) : ''
     })
 }
-
-const grid = new Muuri('.projects', {
+function removeActive(data){
+    data.forEach((item) => { item.classList.remove('active') })
+}
+const grid = new Muuri('.projects__content', {
     layout: {
         rounding: false
     }
@@ -36,7 +39,7 @@ window.onload = () => {
 
     //GRID LAYOUTS TO PROJECTS
     grid.refreshItems().layout()
-    document.querySelector('.projects').classList.add('img-loaded')
+    document.querySelector('.projects__content').classList.add('img-loaded')
 
     //ADD CLASS TO ITEM ACTIVE FROM CATEGORIES
     const categories = document.querySelectorAll('#categories a')
@@ -45,6 +48,22 @@ window.onload = () => {
     //ADD CLASS TO ITEM ACTIVE FROM MENU
     const menu = document.querySelectorAll('.menu a')
     itemActive(menu, true)
+    const logo = document.querySelector('.logo')
+    logo.addEventListener('click', () => { itemActive(menu, true, true) })
+
+    //ACTIVE CLASS ON SCROLL
+    const sections = document.querySelectorAll('section');
+    onscroll = ()=>{
+        const scrollPosition = document.documentElement.scrollTop;
+        sections.forEach(section =>{
+            if(scrollPosition >= section.offsetTop && scrollPosition < section.offsetTop + section.offsetHeight){
+                const currentId = section.attributes.id.value
+                removeActive(menu)
+                const item = `nav a[href="#${currentId}"]`
+                document.querySelector(item).classList.add('active')
+            }  
+        })
+    }
 }
 //ANIMATIONS
 AOS.init();

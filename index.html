@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
   </head>
   <body>
-    <header data-aos="fade-down" data-aos-easing="ease-in-out">
+    <header data-aos="fade-down">
       <div class="container header">
         <div class="logo"><a href="#"><img src="images/logo.png" alt="Logo Ruby" loading="eager"/><span>marcosrubí</span></a></div>
         <div class="toggle" onclick="javascript:toggleMenu();"></div>
@@ -34,7 +34,7 @@
         </div>
       </div>
     </header>
-    <section class="banner" data-aos="fade">
+    <div class="banner" data-aos="fade">
       <div class="banner__video">
         <video autoplay="autoplay" loop="loop">
           <source src="video/bg_banner.mp4" type="video/mp4"/>Tu navegador no soporta la etiqueta HTML5 video
@@ -45,7 +45,7 @@
         <h1>Hola, mi nombre es <wbr><span> Marcos Rubí </span></h1>
         <p><b>Técnico en redes y sistemas operativos</b>, actualmente soy estudiante de tercer año en ingeniería de sistemas y redes.</p><a class="btn btn-primary" href="#" download="CV-Marcos_Rubi">Descargar CV </a>
       </div>
-    </section>
+    </div>
     <section class="about-me" id="sobre-mi">
       <div class="container">
         <div class="heading" data-aos="fade-top" data-aos-once="true">
@@ -66,31 +66,20 @@
                 <div><span class="languaje">JavaScript</span><span class="progress" title="70%"><span class="value js"></span></span></div>
                 <div><span class="languaje">PHP</span><span class="progress" title="60%"><span class="value php"></span></span></div>
                 <div><span class="languaje">GIT</span><span class="progress" title="50%"><span class="value git"></span></span></div>
+                <div><span class="languaje">MySQL & MongoDB</span><span class="progress" title="50%"><span class="value bd"></span></span></div>
               </h2>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <main class="even" id="proyectos">
+    <section class="projects" id="proyectos">
       <div class="container" data-aos="fade" data-aos-once="true">
         <div class="heading">
           <h2>Proyectos</h2>
         </div>
         <div class="categories" id="categories"><a class="active" href="#">Todos</a><a href="#">GitHub</a><a href="#">Codepen</a><a href="#">Wordpress</a></div>
-        <section class="projects">
-          <figure class="effect-bubba item" data-categorie="wordpress">
-            <div class="item-content"><img src="https://cdn.pixabay.com/photo/2020/03/01/12/36/fire-4892711__340.jpg" loading="lazy"/></div>
-            <figcaption><a class="btn btn-primary" href="#">Código</a><a class="btn btn-secondary" href="#">Demo </a></figcaption>
-          </figure>
-          <figure class="effect-bubba item" data-categorie="github">
-            <div class="item-content"><img src="https://cdn.pixabay.com/photo/2020/12/26/16/52/pasture-5861901__340.jpg" loading="lazy"/></div>
-            <figcaption><a class="btn btn-primary" href="#">Código</a><a class="btn btn-secondary" href="#">Demo </a></figcaption>
-          </figure>
-          <figure class="effect-bubba item" data-categorie="codepen">
-            <div class="item-content"><img src="https://cdn.pixabay.com/photo/2020/12/26/16/47/christmas-5861895__340.jpg" loading="lazy"/></div>
-            <figcaption><a class="btn btn-primary" href="#">Código</a><a class="btn btn-secondary" href="#">Demo</a></figcaption>
-          </figure>
+        <div class="projects__content">
           <figure class="effect-bubba item" data-categorie="wordpress">
             <div class="item-content"><img src="https://cdn.pixabay.com/photo/2020/03/01/12/36/fire-4892711__340.jpg" loading="lazy"/></div>
             <figcaption><a class="btn btn-primary" href="#">Código</a><a class="btn btn-secondary" href="#">Demo </a></figcaption>
@@ -103,9 +92,9 @@
             <div class="item-content"><img src="https://cdn.pixabay.com/photo/2020/12/26/16/47/christmas-5861895__340.jpg" loading="lazy"/></div>
             <figcaption><a class="btn btn-primary" href="#">Código</a><a class="btn btn-secondary" href="#">Demo </a></figcaption>
           </figure>
-        </section>
+        </div>
       </div>
-    </main>
+    </section>
     <section class="experience container" id="experiencia">
       <div class="heading" data-aos="fade" data-aos-once="true">
         <h2>Experiencia</h2>
@@ -129,7 +118,8 @@
         </div>
       </div>
     </section>
-    <footer id="contactar">
+    <section id="contactar"></section>
+    <section class="contact" id="contactar">
       <div class="container">
         <div class="heading" data-aos="fade-top" data-aos-once="true">
           <h2>Contactar</h2>
@@ -176,7 +166,7 @@
           </div>
         </div>
       </div>
-    </footer><!-- MUURI.JS ~ Filtrar proyectos por categorías -->
+    </section><!-- MUURI.JS ~ Filtrar proyectos por categorías -->
     <script src="https://cdn.jsdelivr.net/npm/web-animations-js@2.3.2/web-animations.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/muuri@0.9.3/dist/muuri.min.js"></script><!-- AOS.JS ~ ANIMATIONS -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script><!-- JS Personalizado -->
