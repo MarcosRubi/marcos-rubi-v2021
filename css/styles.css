@@ -459,8 +459,8 @@ section.contact .form-contact form div span {
   margin-left: 7px;
   position: absolute;
 }
-section.contact .form-contact form input[type=text],
-section.contact .form-contact form input[type=email],
+section.contact .form-contact form input[type="text"],
+section.contact .form-contact form input[type="email"],
 section.contact .form-contact form textarea {
   width: 100%;
   height: 50px;
@@ -476,15 +476,15 @@ section.contact .form-contact form textarea {
   padding-top: 12px;
   resize: none;
 }
-section.contact .form-contact form input[type=submit] {
+section.contact .form-contact form input[type="submit"] {
   border: none;
   outline: none;
   padding: 20px 30px;
 }
-section.contact .form-contact form input[type=text]:focus ~ label span,
-section.contact .form-contact form input[type=email]:focus ~ label span,
-section.contact .form-contact form input[type=text]:valid ~ label span,
-section.contact .form-contact form input[type=email]:valid ~ label span,
+section.contact .form-contact form input[type="text"]:focus ~ label span,
+section.contact .form-contact form input[type="email"]:focus ~ label span,
+section.contact .form-contact form input[type="text"]:valid ~ label span,
+section.contact .form-contact form input[type="email"]:valid ~ label span,
 section.contact .form-contact form textarea:focus ~ label span,
 section.contact .form-contact form textarea:valid ~ label span {
   top: -33px;
@@ -492,10 +492,10 @@ section.contact .form-contact form textarea:valid ~ label span {
   font-size: 0.9rem;
   color: #f0f0f0;
 }
-section.contact .form-contact form input[type=text]:focus ~ label .feather,
-section.contact .form-contact form input[type=email]:focus ~ label .feather,
-section.contact .form-contact form input[type=text]:valid ~ label .feather,
-section.contact .form-contact form input[type=email]:valid ~ label .feather,
+section.contact .form-contact form input[type="text"]:focus ~ label .feather,
+section.contact .form-contact form input[type="email"]:focus ~ label .feather,
+section.contact .form-contact form input[type="text"]:valid ~ label .feather,
+section.contact .form-contact form input[type="email"]:valid ~ label .feather,
 section.contact .form-contact form textarea:focus ~ label .feather,
 section.contact .form-contact form textarea:valid ~ label .feather {
   color: #01579b;
@@ -610,7 +610,7 @@ section.contact .form-contact form textarea:valid ~ label .feather {
   }
 
   nav.menu a,
-.social a {
+  .social a {
     font-size: 28px;
     padding: 10px 15px;
   }
@@ -663,9 +663,9 @@ section.contact .form-contact form textarea:valid ~ label .feather {
   }
 
   #sobre-mi,
-#proyectos,
-#experiencia,
-#contactar {
+  #proyectos,
+  #experiencia,
+  #contactar {
     padding-top: 60px;
   }
 

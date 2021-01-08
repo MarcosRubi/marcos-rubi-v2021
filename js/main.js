@@ -5,17 +5,15 @@ function toggleMenu() {
     menu.classList.toggle('active')
     toggle.classList.toggle('active')
 }
-function itemActive(data, isMenu = false) {
+function itemActive(data) {
     data.forEach((element) => {
         element.addEventListener('click', (e) => {
+            e.preventDefault()
 
-            data.forEach((item) => { item.classList.remove('active') })
+            removeActive(data)
             element.classList.add('active')
-            if (isMenu == false) {
-                e.preventDefault()
-                const categorie = element.innerHTML.toLowerCase()
-                categorie === 'todos' ? grid.filter('[data-categorie]') : grid.filter(`[data-categorie = ${categorie}]`)
-            }
+            const categorie = element.innerHTML.toLowerCase()
+            categorie === 'todos' ? grid.filter('[data-categorie]') : grid.filter(`[data-categorie = ${categorie}]`)
         })
     })
 }
@@ -45,12 +43,10 @@ window.onload = () => {
     const categories = document.querySelectorAll('#categories a')
     itemActive(categories)
 
-    //ADD CLASS TO ITEM ACTIVE FROM MENU
-    const menu = document.querySelectorAll('.menu a')
-    itemActive(menu, true)
-
+    
     //ACTIVE CLASS ON SCROLL
     const sections = document.querySelectorAll('section');
+    const menu = document.querySelectorAll('.menu a')
     onscroll = () => {
         const scrollPosition = document.documentElement.scrollTop;
         sections.forEach(section => {
