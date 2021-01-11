@@ -1,0 +1,146 @@
+body {
+  background: #333;
+}
+
+a {
+  color: #1e88e5;
+}
+
+h1 span {
+  color: #e53935;
+}
+
+.btn {
+  color: #f0f0f0;
+}
+.btn:focus {
+  box-shadow: 0px 3px 5px #1a1a1a;
+}
+
+.btn-primary {
+  background: #e53935;
+}
+.btn-primary:hover {
+  box-shadow: 0px 2px 4px #1a1a1a;
+  background: #b71c1c;
+}
+
+.btn-secondary {
+  background: #1e88e5;
+}
+.btn-secondary:hover {
+  background: #10375c;
+  box-shadow: 0px 2px 4px #1a1a1a;
+}
+
+header {
+  background: #1a1a1a;
+}
+header .menu a:hover,
+header .social a:hover,
+header .menu a.active {
+  color: #b71c1c;
+}
+
+header.sticky {
+  box-shadow: 0px 0px 8px #1a1a1a;
+}
+
+.banner {
+  color: #fff;
+}
+.banner .banner__overlay {
+  background: #303952;
+}
+
+.about-me {
+  color: #f0f0f0;
+}
+.about-me p {
+  color: #f0f0f0;
+  opacity: 70%;
+}
+.about-me__skills span.progress {
+  background: #d9e2ff;
+}
+.about-me__skills span.progress span.value {
+  background: #1e88e5;
+}
+
+section.projects {
+  color: #f0f0f0;
+}
+section.projects .categories a {
+  color: #1e88e5;
+}
+section.projects .categories a.active {
+  color: #e53935;
+}
+
+figure.effect-bubba figcaption::before {
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+figure.effect-bubba figcaption::after {
+  border-right: 1px solid #f0f0f0;
+  border-left: 1px solid #f0f0f0;
+}
+
+.experience {
+  color: #f0f0f0;
+}
+.experience__content {
+  box-shadow: 0px 0px 1px #f1f1f1;
+  background: #1a1a1a;
+  color: #f0f0f0;
+}
+.experience__content .date {
+  background: #1e88e5;
+  color: #fff;
+}
+.experience__content .date span {
+  color: #f1f1f1;
+}
+
+section.contact {
+  background: #1a1a1a;
+  color: #f0f0f0;
+}
+section.contact a {
+  color: #1e88e5;
+}
+section.contact a:hover {
+  color: #10375c;
+}
+section.contact .form-contact div {
+  color: #1a1a1a;
+}
+section.contact .form-contact input[type=text]:focus ~ label span,
+section.contact .form-contact input[type=email]:focus ~ label span,
+section.contact .form-contact input[type=text]:valid ~ label span,
+section.contact .form-contact input[type=email]:valid ~ label span,
+section.contact .form-contact textarea:focus ~ label span,
+section.contact .form-contact textarea:valid ~ label span {
+  color: #1a1a1a;
+}
+
+.toggle {
+  filter: invert(0);
+}
+
+.toggle.active {
+  filter: invert(0);
+}
+
+nav.menu {
+  background: #1a1a1a;
+}
+
+@media (max-width: 576px) {
+  h1 span {
+    color: #e53935;
+  }
+}
+
+/*# sourceMappingURL=dark.css.map */

@@ -13,7 +13,8 @@
     <meta name="twitter:creator" content="@Fuhrer_RD"/>
     <title>Portafolio | Marcos Rubí</title>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/><!-- ESTILOS PERSONALES -->
-    <link rel="stylesheet" href="css/styles.css"/><!-- FUENTES -->
+    <link rel="stylesheet" href="css/styles.css"/>
+    <link rel="stylesheet" href="" id="theme"/><!-- FUENTES -->
     <link href="https://fonts.googleapis.com/css2?family=Hind+Guntur:wght@300;400&amp;family=Mirza:wght@600&amp;display=swap" rel="stylesheet"/><!-- ICONOS -->
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script><!-- AOS.JS ~ ANIMATIONs -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
@@ -21,7 +22,7 @@
   <body>
     <header data-aos="fade-down">
       <div class="container header">
-        <div class="logo"><a href="#"><img src="images/logo.png" alt="Logo Ruby" loading="eager"/><span>marcosrubí</span></a></div>
+        <div class="logo"><a href="#"><img src="images/logo.webp" alt="Logo Ruby" loading="eager"/><span>marcosrubí</span></a></div>
         <div class="toggle" onclick="javascript:toggleMenu();"></div>
         <nav class="menu">
           <ul class="capitalize">
@@ -35,9 +36,10 @@
           <ul>
             <li><a href="https://www.linkedin.com/in/marcos-rubi/" target="_blank"><i data-feather="linkedin"> </i></a></li>
             <li><a href="https://www.facebook.com/MarcosRubi07" target="_blank"><i data-feather="facebook"></i></a></li>
-            <li><a href="https://www.instagram.com/marcos_rubi_07/" target="_blank"><i data-feather="instagram"></i></a></li>
             <li><a href="mailto:danielhernandez9980@gmail.com"><i data-feather="mail"></i></a></li>
             <li><a href="https://codepen.io/Marcos_Rubi" target="_blank"><i data-feather="codepen"></i></a></li>
+            <li id="themeDark"><i class="theme" data-feather="moon"></i></li>
+            <li id="themeLight"><i class="theme" data-feather="sun"></i></li>
           </ul>
         </div>
       </div>
@@ -60,7 +62,7 @@
           <h2>Sobre Mí</h2>
         </div>
         <div class="d-flex">
-          <div class="about-me__img" data-aos="fade-right" data-aos-once="true"><img src="https://via.placeholder.com/250x250" alt="Foto de perfil - Marcos Rubí" loading="lazy"/></div>
+          <div class="about-me__img" data-aos="fade-right" data-aos-once="true"><img src="https://via.placeholder.com/250x300" alt="Foto de perfil - Marcos Rubí" loading="lazy"/></div>
           <div class="about-me__content">
             <div class="about-me__description" data-aos="fade" data-aos-once="true">
               <h2>Marcos Daniel Rubí Hernández</h2>
@@ -89,16 +91,16 @@
         <div class="categories" id="categories"><a class="active" href="#">Todos</a><a href="#">GitHub</a><a href="#">Codepen</a><a href="#">Wordpress</a></div>
         <div class="projects__content">
           <figure class="effect-bubba item" data-categorie="wordpress">
-            <div class="item-content"><img src="https://cdn.pixabay.com/photo/2020/03/01/12/36/fire-4892711__340.jpg" loading="lazy"/></div>
+            <div class="item-content"><img src="images/en_desarrollo.webp" loading="lazy"/></div>
             <figcaption><a class="btn btn-primary" href="#">Código</a><a class="btn btn-secondary" href="#">Demo </a></figcaption>
           </figure>
           <figure class="effect-bubba item" data-categorie="github">
             <div class="item-content"><img src="images/bg_studyink.webp" loading="lazy"/></div>
             <figcaption><a class="btn btn-primary" href="https://github.com/MarcosRubi/studyInk" target="_blank">Código</a><a class="btn btn-secondary" href="https://study-ink.vercel.app/" target="_blank">Demo </a></figcaption>
           </figure>
-          <figure class="effect-bubba item" data-categorie="codepen">
-            <div class="item-content"><img src="https://cdn.pixabay.com/photo/2020/12/26/16/47/christmas-5861895__340.jpg" loading="lazy"/></div>
-            <figcaption><a class="btn btn-primary" href="#">Código</a><a class="btn btn-secondary" href="#">Demo</a></figcaption>
+          <figure class="effect-bubba item" data-categorie="github">
+            <div class="item-content"><img src="images/inveto.webp" loading="lazy"/></div>
+            <figcaption><a class="btn btn-primary" href="https://github.com/MarcosRubi/inveto" target="_blank">Código</a><a class="btn btn-secondary" href="https://inveto.vercel.app/" target="_blank">Demo</a></figcaption>
           </figure>
           <figure class="effect-bubba item" data-categorie="github">
             <div class="item-content"><img src="images/bg_techgear.webp" loading="lazy"/></div>
@@ -109,7 +111,7 @@
             <figcaption><a class="btn btn-primary" href="https://github.com/MarcosRubi/charity" target="_blank">Código</a><a class="btn btn-secondary" href="https://charity.vercel.app/" target="_blank">Demo </a></figcaption>
           </figure>
           <figure class="effect-bubba item" data-categorie="codepen">
-            <div class="item-content"><img src="https://cdn.pixabay.com/photo/2020/12/26/16/47/christmas-5861895__340.jpg" loading="lazy"/></div>
+            <div class="item-content"><img src="images/en_desarrollo.webp" loading="lazy"/></div>
             <figcaption><a class="btn btn-primary" href="#">Código</a><a class="btn btn-secondary" href="#">Demo</a></figcaption>
           </figure>
         </div>
@@ -138,7 +140,6 @@
         </div>
       </div>
     </section>
-    <section id="contactar"></section>
     <section class="contact" id="contactar">
       <div class="container">
         <div class="heading" data-aos="fade-top" data-aos-once="true">

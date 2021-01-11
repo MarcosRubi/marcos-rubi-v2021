@@ -43,23 +43,66 @@ window.onload = () => {
     const categories = document.querySelectorAll('#categories a')
     itemActive(categories)
 
-    
+
     //ACTIVE CLASS ON SCROLL
-    const sections = document.querySelectorAll('section');
+    const sections = document.querySelectorAll('section')
     const menu = document.querySelectorAll('.menu a')
     onscroll = () => {
         const scrollPosition = document.documentElement.scrollTop;
         sections.forEach(section => {
             if (scrollPosition + 1 >= section.offsetTop - 100 && scrollPosition < section.offsetTop + section.offsetHeight) {
                 const currentId = section.attributes.id.value
-                currentId == 'banner' ? removeActive(menu) : ''
-                removeActive(menu)
-                const item = `nav a[href="#${currentId}"]`
-                document.querySelector(item).classList.add('active')
+                if (currentId == 'banner') {
+                    removeActive(menu)
+                } else {
+                    removeActive(menu)
+                    const item = `nav a[href="#${currentId}"]`
+                    document.querySelector(item).classList.add('active')
+                }
             }
         })
     }
+
+    //THEME DARK
+    const themeDark = document.getElementById('themeDark')
+    const themeLight = document.getElementById('themeLight')
+
+    isDarkTheme();
+
+    themeLight.addEventListener('click', () => {
+        const route = document.getElementById('theme')
+
+        localStorage.setItem('theme', 'light')
+        route.href = ""
+        themeLight.style.display = 'none'
+        themeDark.style.display = 'block'
+    })
+    themeDark.addEventListener('click', () => {
+        const route = document.getElementById('theme')
+
+        localStorage.setItem('theme', 'dark')
+        route.href = "css/dark.css"
+        themeDark.style.display = 'none'
+        themeLight.style.display = 'block'
+    })
+
 }
+function isDarkTheme() {
+    const route = document.getElementById('theme')
+    const theme = localStorage.getItem('theme')
+    const themeDark = document.getElementById('themeDark')
+    const themeLight = document.getElementById('themeLight')
+
+    theme == 'dark' ? route.href = "css/dark.css" : route.href = ""
+    if(theme == 'dark'){
+        themeDark.style.display = 'none'
+        themeLight.style.display = 'block'
+    }
+    else{ 
+        themeDark.style.display = 'block'
+        themeLight.style.display = 'off'
+    }
+} 
 //ANIMATIONS
 AOS.init();
 
