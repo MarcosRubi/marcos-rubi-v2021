@@ -42,10 +42,6 @@ header .menu a.active {
   color: #b71c1c;
 }
 
-header.sticky {
-  box-shadow: 0px 0px 8px #1a1a1a;
-}
-
 .banner {
   color: #fff;
 }
@@ -103,6 +99,13 @@ figure.effect-bubba figcaption::after {
   color: #f1f1f1;
 }
 
+.certificate {
+  color: #fff;
+}
+.certificate .slide-show {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
 section.contact {
   background: #1a1a1a;
   color: #f0f0f0;
@@ -137,6 +140,11 @@ nav.menu {
   background: #1a1a1a;
 }
 
+@media (max-width: 768px) {
+  nav.menu {
+    box-shadow: 1px 0px 4px #f0f0f0;
+  }
+}
 @media (max-width: 576px) {
   h1 span {
     color: #e53935;
