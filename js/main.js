@@ -99,34 +99,41 @@ window.onload = () => {
     const overlay = document.querySelector('.certificate__overlay')
     const galeryImg = document.querySelectorAll('.certificate__content img')
     const imgSlideShow = document.getElementById('img__slideshow')
+    let img = slide.querySelector('img')
 
+    document.addEventListener("keydown", event => {
+        event.keyCode == 37 ? leftImg() : ''
+        event.keyCode == 39 ? rightImg() : ''
+    })
     slide.addEventListener('click', (e) => {
         let back = slide.querySelector('.btn-back')
         let next = slide.querySelector('.btn-next')
-        let img = slide.querySelector('img')
         let tgt = e.target;
 
-        if (tgt == back) {
-            if (count > 0) {
-                img.src = images[count - 1].img
-                count--
-            }
-            else {
-                img.src = images[images.length - 1].img
-                count = images.length - 1
-            }
-        }
-        else if (tgt == next) {
-            if (count < images.length - 1) {
-                img.src = images[count + 1].img
-                count++
-            }
-            else {
-                img.src = images[0].img
-                count = 0
-            }
-        }
+        tgt == back ? leftImg() : ''
+        tgt == next ? rightImg() : ''
+
     })
+    function leftImg() {
+        if (count > 0) {
+            img.src = images[count - 1].img
+            count--
+        }
+        else {
+            img.src = images[images.length - 1].img
+            count = images.length - 1
+        }
+    }
+    function rightImg() {
+        if (count < images.length - 1) {
+            img.src = images[count + 1].img
+            count++
+        }
+        else {
+            img.src = images[0].img
+            count = 0
+        }
+    }
     Array.from(galeryImg).forEach(img => {
         img.addEventListener('click', (e) => {
             const imageSelected = +e.target.dataset.certificate
@@ -135,10 +142,18 @@ window.onload = () => {
             overlay.style.opacity = 1
             overlay.style.visibility = "visible"
         })
-        document.querySelector('.btn-close').addEventListener('click', ()=>{
+        document.querySelector('.btn-close').addEventListener('click', () => {
+            closeModal()
+        })
+        document.addEventListener("keydown", event => {
+            if (event.keyCode == 27) { //Tecla ESC
+                closeModal()
+            }
+        })
+        function closeModal() {
             overlay.style.opacity = 0
             overlay.style.visibility = "hidden"
-        })
+        }
     })
 }
 function isDarkTheme() {
