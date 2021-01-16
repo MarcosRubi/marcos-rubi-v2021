@@ -156,6 +156,63 @@ window.onload = () => {
         }
     })
 }
+
+//VALIDATE FORM CONTACT
+const formContact = document.getElementById('form-contact')
+let textInput = document.getElementById('submit')
+formContact.addEventListener('submit', (e) => {
+    validate(e)
+})
+function validate(e) {
+    const name = document.getElementById('name')
+    const email = document.getElementById('email')
+    const comment = document.getElementById('comment')
+    const errorMessage = document.getElementById('errorMessage')
+    const emailRegExp = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/
+    let error = false
+
+    errorMessage.innerHTML = ''
+
+    if (name.value.trim().length <= 0) {
+        name.style.border = '2px solid red'
+        errorMessage.innerHTML += 'El nombre es requerido! <br>'
+        error = true
+    }
+    else {
+        name.style.border = '1px solid'
+        errorMessage.innerHTML += ''
+    }
+
+    if (email.value.trim().length <= 0) {
+        email.style.border = '2px solid red'
+        errorMessage.innerHTML += 'El email es requerido! <br>'
+        error = true
+    }
+    else if (!(emailRegExp.test(email.value))) {
+        email.style.border = '2px solid red'
+        errorMessage.innerHTML += 'El email no es valido! <br>'
+        error = true
+    }
+    else {
+        email.style.border = '1px solid'
+        errorMessage.innerHTML += ''
+    }
+
+    if (comment.value.trim().length <= 0) {
+        comment.style.border = '2px solid red'
+        document.getElementById('errorMessage').innerHTML += 'El mensaje es requerido! <br>'
+        error = true
+    }
+    else {
+        comment.style.border = '1px solid'
+        document.getElementById('errorMessage').innerHTML += ''
+    }
+
+    error ? e.preventDefault() : ''
+}
+
+
+
 function isDarkTheme() {
     const route = document.getElementById('theme')
     const theme = localStorage.getItem('theme')

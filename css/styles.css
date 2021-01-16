@@ -615,6 +615,10 @@ section.contact .form-contact form textarea:focus ~ label .feather,
 section.contact .form-contact form textarea:valid ~ label .feather {
   color: #01579b;
 }
+section.contact .form-contact #errorMessage {
+  color: #c1272d;
+  transition: all 500ms;
+}
 
 @media (max-width: 992px) {
   .d-flex {
