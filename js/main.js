@@ -20,13 +20,35 @@ function itemActive(data) {
 function removeActive(data) {
     data.forEach((item) => { item.classList.remove('active') })
 }
+function isDarkTheme() {
+    const route = document.getElementById('theme')
+    const theme = localStorage.getItem('theme')
+    const themeDark = document.getElementById('themeDark')
+    const themeLight = document.getElementById('themeLight')
+
+    theme == 'dark' ? route.href = "css/dark.css" : route.href = ""
+    if (theme == 'dark') {
+        themeDark.style.display = 'none'
+        themeLight.style.display = 'block'
+    }
+    else {
+        themeDark.style.display = 'block'
+        themeLight.style.display = 'off'
+    }
+}
 
 const grid = new Muuri('.projects__content', {
     layout: {
         rounding: false
     }
 })
+grid.refreshItems().layout()
+
+//ICONS
 feather.replace()
+
+//ANIMATIONS
+AOS.init();
 
 window.onload = () => {
     //HEADER STICKY
@@ -35,9 +57,6 @@ window.onload = () => {
         header.classList.toggle("sticky", scrollY > 0)
     })
 
-    //GRID LAYOUTS TO PROJECTS
-    grid.refreshItems().layout()
-    document.querySelector('.projects__content').classList.add('img-loaded')
 
     //ADD CLASS TO ITEM ACTIVE FROM CATEGORIES
     const categories = document.querySelectorAll('#categories a')
@@ -159,11 +178,7 @@ window.onload = () => {
 
 //VALIDATE FORM CONTACT
 const formContact = document.getElementById('form-contact')
-let textInput = document.getElementById('submit')
 formContact.addEventListener('submit', (e) => {
-    validate(e)
-})
-function validate(e) {
     const name = document.getElementById('name')
     const email = document.getElementById('email')
     const comment = document.getElementById('comment')
@@ -208,27 +223,15 @@ function validate(e) {
         document.getElementById('errorMessage').innerHTML += ''
     }
 
-    error ? e.preventDefault() : ''
-}
-
-
-
-function isDarkTheme() {
-    const route = document.getElementById('theme')
-    const theme = localStorage.getItem('theme')
-    const themeDark = document.getElementById('themeDark')
-    const themeLight = document.getElementById('themeLight')
-
-    theme == 'dark' ? route.href = "css/dark.css" : route.href = ""
-    if (theme == 'dark') {
-        themeDark.style.display = 'none'
-        themeLight.style.display = 'block'
+    if (error) {
+        e.preventDefault()
+    }else{
+        setTimeout(() => {
+            name.value = ''
+            email.value = ''
+            comment.value = ''
+        }, 2000);
     }
-    else {
-        themeDark.style.display = 'block'
-        themeLight.style.display = 'off'
-    }
-}
-//ANIMATIONS
-AOS.init();
+})
+
 

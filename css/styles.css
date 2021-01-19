@@ -304,11 +304,6 @@ section.projects .categories a.active {
 section.projects .projects__content {
   position: relative;
   width: 100%;
-  opacity: 0;
-  transform: opacity 0.5s linear 1s;
-}
-section.projects .projects__content.img-loaded {
-  opacity: 1;
 }
 section.projects .projects__content .item {
   position: absolute;
