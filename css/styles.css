@@ -24,9 +24,10 @@ body {
 }
 
 .container {
-  width: 90%;
-  max-width: 1200px;
+  width: 95%;
+  max-width: 1366px;
   margin: 0px auto;
+  position: relative;
 }
 
 ul {
@@ -44,14 +45,14 @@ h1 {
   font-size: 3rem;
 }
 h1 span {
-  font-size: 3.5rem;
+  font-size: 4rem;
   color: #c1272d;
   font-family: "Mirza", cursive;
 }
 
 h3 {
   font-family: "Mirza", cursive;
-  font-size: 1.8rem;
+  font-size: 2.1rem;
 }
 
 .capitalize {
@@ -87,7 +88,7 @@ h3 {
 
 .heading {
   text-align: center;
-  font-size: 2.7rem;
+  font-size: 3rem;
   margin-bottom: 15px;
   font-family: "Mirza", cursive;
   padding-top: 60px;
@@ -121,7 +122,7 @@ h3 {
 }
 
 header {
-  font-size: 20px;
+  font-size: 22px;
   width: 100%;
   position: fixed;
   top: 0;
@@ -657,6 +658,13 @@ header #themeLight {
   }
 }
 @media (max-width: 768px) {
+  h1 {
+    font-size: 2.3rem;
+  }
+  h1 span {
+    font-size: 3rem;
+  }
+
   header .header {
     width: 90%;
   }
@@ -707,7 +715,7 @@ header #themeLight {
     height: 100vh;
     top: 84px;
     right: -100%;
-    padding: 100px 50px;
+    padding: 70px 50px;
     text-align: center;
     background: #fff;
     transition: all 800ms;
@@ -802,6 +810,10 @@ header #themeLight {
     font-family: "Mirza", cursive;
   }
 
+  h3 {
+    font-size: 1.7rem;
+  }
+
   #sobre-mi,
 #proyectos,
 #experiencia,
@@ -822,6 +834,11 @@ header #themeLight {
   }
   header nav.menu {
     top: 129px;
+    padding: 50px;
+  }
+
+  .banner {
+    font-size: 16px;
   }
 
   .about-me__content {

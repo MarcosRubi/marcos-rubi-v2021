@@ -59,6 +59,7 @@ window.onload = () => {
 
 
     //ADD CLASS TO ITEM ACTIVE FROM CATEGORIES
+    grid.refreshItems().layout()
     const categories = document.querySelectorAll('#categories a')
     itemActive(categories)
 
